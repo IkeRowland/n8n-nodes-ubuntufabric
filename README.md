@@ -1,18 +1,15 @@
-# n8n-nodes-peliqan
+# n8n-nodes-ubuntufabric
 
-This is an n8n community node. It lets you use Peliqan in your n8n workflows.
+This is an n8n community node. It lets you use UbuntuFabric in your n8n workflows.
 
-Peliqan.io is an all-in-one data platform with ELT, built-in data warehouse, data transformations and a data cockpit.
+UbuntuFabric.io is an all-in-one data platform with ELT, built-in data warehouse, data transformations and a data cockpit.
 
-[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
+[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation tool.
 
 [Installation](#installation)  
 [Operations](#operations)  
-[Credentials](#credentials) 
-[Compatibility](#compatibility)  
-[Usage](#usage)  
+[Credentials](#credentials)  
 [Resources](#resources)  
-[Version history](#version-history) 
 
 ## Installation
 
@@ -20,30 +17,26 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 ## Operations
 
-* List connections  
-* Get data from table  
-* Run pipeline  
-* Execute endpoint  
-* Create a new SQL query in Peliqan  
-* Execute a SQL query via Peliqan  
-* Run a script  
-* Return logs of a script  
+* Create a new SQL query in UbuntuFabric
+* Execute a SQL query via UbuntuFabric
+* Run pipelines
+* Execute scripts
+* Get table data
 
 ## Credentials
 
-Get your API key in Peliqan under Settings.
-
-## Usage
-
-Visit https://help.peliqan.io for more info.
+Get your API key in UbuntuFabric under Settings.
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/#community-nodes)
-* https://peliqan.io
+* [UbuntuFabric Documentation](https://help.ubuntufabric.io)
 
 ## Version history
 
-* May 2025: v0.0.1 initial implementation
-* June 2025: v0.0.3 add list operation for tables
-* June 2025: v0.0.4 allow tool usage of node
+### 1.0.0
+
+* Initial release
+
+## Links
+
+* [UbuntuFabric](https://ubuntufabric.io)
