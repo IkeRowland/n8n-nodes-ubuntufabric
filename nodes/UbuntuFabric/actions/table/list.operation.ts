@@ -45,8 +45,6 @@ export const listFields: any = [
 ];
 
 export async function execute(this: any, i: number): Promise<any> {
-	const applicationId = this.getNodeParameter('applicationId', i) as string;
-
 	const response = await ubuntufabricApiRequest.call(this, 'GET', 'api/applications/');
 
 	return response;

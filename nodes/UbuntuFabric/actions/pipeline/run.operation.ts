@@ -1,4 +1,3 @@
-import type { IExecuteFunctions, INodeExecutionData, INodeProperties } from 'n8n-workflow';
 import { ubuntufabricApiRequest } from '../../transport';
 
 export const run: any = {

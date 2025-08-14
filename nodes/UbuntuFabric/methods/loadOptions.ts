@@ -1,5 +1,7 @@
 import type { ILoadOptionsFunctions } from 'n8n-workflow';
 
+import type { IDataObject } from 'n8n-workflow';
+
 import { ubuntufabricApiRequest } from '../transport';
 
 export async function getDataWarehouses(this: ILoadOptionsFunctions) {
@@ -59,7 +61,7 @@ export async function getPipelineRuns(this: ILoadOptionsFunctions) {
 }
 
 export async function getInterfaceRuns(this: ILoadOptionsFunctions) {
-	const accountRes = await ubuntufabricApiRequest.call(this, 'GET', 'api/user/account');
+	await ubuntufabricApiRequest.call(this, 'GET', 'api/user/account');
 	const endpoints = await ubuntufabricApiRequest.call(this, 'GET', 'api/api_endpoints');
 	const returnData: IDataObject[] = [];
 

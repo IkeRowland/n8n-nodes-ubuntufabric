@@ -1,4 +1,4 @@
-import { IExecuteFunctions } from 'n8n-core';
+import type { IExecuteFunctions } from 'n8n-workflow';
 
 import {
 	IDataObject,
@@ -66,7 +66,124 @@ export class UbuntuFabric implements INodeType {
 				],
 				default: 'query',
 			},
-			...router,
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				displayOptions: {
+					show: {
+						resource: ['endpoint'],
+					},
+				},
+				options: [
+					{
+						name: 'Execute',
+						value: 'exec',
+						description: 'Execute an endpoint',
+						action: 'Execute an endpoint',
+					},
+				],
+				default: 'exec',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				displayOptions: {
+					show: {
+						resource: ['pipeline'],
+					},
+				},
+				options: [
+					{
+						name: 'Run',
+						value: 'run',
+						description: 'Run a pipeline',
+						action: 'Run a pipeline',
+					},
+				],
+				default: 'run',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				displayOptions: {
+					show: {
+						resource: ['query'],
+					},
+				},
+				options: [
+					{
+						name: 'Create',
+						value: 'create',
+						description: 'Create a new query',
+						action: 'Create a new query',
+					},
+					{
+						name: 'Execute',
+						value: 'exec',
+						description: 'Execute a query',
+						action: 'Execute a query',
+					},
+				],
+				default: 'create',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				displayOptions: {
+					show: {
+						resource: ['script'],
+					},
+				},
+				options: [
+					{
+						name: 'Logs',
+						value: 'logs',
+						description: 'Get script logs',
+						action: 'Get script logs',
+					},
+					{
+						name: 'Run',
+						value: 'run',
+						description: 'Run a script',
+						action: 'Run a script',
+					},
+				],
+				default: 'logs',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				displayOptions: {
+					show: {
+						resource: ['table'],
+					},
+				},
+				options: [
+					{
+						name: 'Get',
+						value: 'get',
+						description: 'Get a table',
+						action: 'Get a table',
+					},
+					{
+						name: 'List',
+						value: 'list',
+						description: 'List tables',
+						action: 'List tables',
+					},
+				],
+				default: 'get',
+			},
 		],
 	};
 

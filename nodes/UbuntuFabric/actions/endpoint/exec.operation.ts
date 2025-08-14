@@ -89,7 +89,6 @@ export const execute = async function (
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	const endpointId = this.getNodeParameter('endpointId', index) as string;
 	const method = this.getNodeParameter('method', index) as string;
 	const path = this.getNodeParameter('path', index) as string;
 	const body = this.getNodeParameter('body', index) as string;
@@ -102,7 +101,7 @@ export const execute = async function (
 	let fullUrl: string;
 	if (path) {
 		const parsed = new URL(path, `https://api.eu.ubuntufabric.io/`);
-		fullUrl = `https://api.eu.ubuntufabric.io/${parsed.url}`;
+		fullUrl = `https://api.eu.ubuntufabric.io/${parsed.pathname}`;
 	} else {
 		fullUrl = `https://api.eu.ubuntufabric.io/${endpointName}`;
 	}

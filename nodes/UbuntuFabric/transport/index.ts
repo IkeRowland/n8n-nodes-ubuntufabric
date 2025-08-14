@@ -1,6 +1,6 @@
-import type { IExecuteFunctions } from 'n8n-core';
+import type { IExecuteFunctions, ILoadOptionsFunctions } from 'n8n-workflow';
 
-import type { IDataObject, ILoadOptionsFunctions } from 'n8n-workflow';
+import type { IDataObject } from 'n8n-workflow';
 
 export interface IData {
 	[key: string]: any;
